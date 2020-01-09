@@ -1,6 +1,28 @@
-# Project #4. Build a Private Blockchain Notary Service
+# Secure Digital Assets on a Private Blockchain
+## Build a Private Blockchain Notary Service
 
-This is Project 4, In this project, I built a Star Registry Service that allows users to claim ownership of their favorite star in the night sky. The code from Project 3 for the persistent private blockchain and API endpoints was used as the basis for this code. In addition, Hapi.js framework was used to create the API.
+This project was developed as part of the Udacity Blockchain Developer Nanodegree course. In this project we used private Blockchain developed in previous project to store Digital Assets on chain. Blockchains are ideal for storing Digital assets and the information about who owns that Digital Asset. Blockchain can handle the ownership of digital asset in the same way that it deals with the ownership of a transaction on a blockchain. The core idea here is around how a Digital Asset should be encoded and decoded once stored on a Blockchain. Encoding of the data is done to efficiently store and transmit data. In this project, I encoded the ASCII data information provided by the user to Hexadecimal string. This encoded data is stored on the Blockchain. When the this data is presented to the user it is decoded back to ASCII.
+
+In this project, I built a Star Registry Service that allows users to claim ownership of their favorite star in the night sky. The code from my previous project - persistent private blockchain and API endpoints was used as the basis for this code. In addition, Hapi.js framework was used to create the API. The API is provided with endpoints to POST and GET information from the Blockchain. The user can send post requests to submit data to store on the Blockchain. The user can use GET requests to retrieve the information stored on the blockchain for this Digital asset. Functionalities to Validate a user 
+
+## Components of the Project
+Below is a brief description of the various components of the Project which were implemented
+
+## Blockchain dataset that allow you to store a Star
+* The application will persist the data (using LevelDB).
+* The application will allow users to identify the Star data with the owner.
+
+## Mempool component
+* The mempool component will store temporal validation requests for 5 minutes (300 seconds).
+* The mempool component will store temporal valid requests for 30 minutes (1800 seconds).
+* The mempool component will manage the validation time window.
+
+## REST API that allows users to interact with the application.
+* The API will allow users to submit a validation request.
+* The API will allow users to validate the request.
+* The API will be able to encode and decode the star data.
+* The API will allow be able to submit the Star data.
+* The API will allow lookup of Stars by hash, wallet address, and height.
 
 ## Setup project for Review.
 
